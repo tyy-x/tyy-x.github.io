@@ -1,0 +1,4 @@
+baseURL = 'https://tyy-x.github.io/'
+languageCode = 'en-us'
+title = 'Note Bank'
+theme = 'ananke'
