@@ -56,6 +56,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
+          cd note-bank
           hugo \
             --gc \
             --minify \
