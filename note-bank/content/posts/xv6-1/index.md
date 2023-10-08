@@ -1,15 +1,16 @@
 +++
-title = 'Xv6 1'
+title = 'First run of xv6'
 date = 2023-09-30T00:03:22+09:00
+tags = ['xv6', 'Operating System']
 draft = false
 +++
 
 This post marks the starting point of my journey into the world of operating
-systems by examining a particular operating system called [xv6](https://github.com/mit-pdos/xv6-public).
+systems by examining a particular one called [xv6](https://github.com/mit-pdos/xv6-public).
 
 Xv6 is a teaching operating system developed by the people in MIT.
 There are two official versions of xv6. It is first developed targeting the x86
-architecture, later their effort moves to the development on the new RISC-V
+architecture, later their effort moves to the development for the new RISC-V
 architecture. And the original x86 version is no longer under development.
 
 I chose the x86 version simply because I want to know more about the x86
@@ -23,19 +24,23 @@ To run the kernel, I need [QEMU](https://www.qemu.org/docs/master/about/index.ht
 QEMU is a machine emulator which can be used for system emulation and user mode
 emulation. System emulation provides a virtual model of an entire machine
 (CPU, memory and emulated devices) to run a guest OS. Obviously, this is what I
-need. To install QEMU on Debian, just run this command: `sudo apt install qemu-system-x86`.
+need. To install QEMU on Debian, just run this command: 
+```
+sudo apt install qemu-system-x86
+```
 
 Now I describe the steps to build and run the kernel.
 
 ### Get the source code
 I cloned the original repo of xv6 as xv6-x86 to my local machine:
-![Clone the repo](clone.png)
+
+![Clone the repo](images/clone.png)
 
 ## Build
 Now, it's time to build the kernel. Run `make` inside the root directory of
 the cloned repository:
 
-![Build the kernel](build.png)
+![Build the kernel](images/build.png)
 You can see that there is something wrong in the source file **mp.c** that
 causes gcc to report errors. Of course the permanent solution is to fix those
 problems (which look like bugs based on the error descriptions), but now I
@@ -55,11 +60,11 @@ CFLAGS = -fno-pic -static -fno-builtin -fno-strict-aliasing -O2 -Wall -MD -ggdb 
 ## Run the kernel
 To run the kernel inside qemu, just run the command `make qemu`:
 
-![Run the kernel](qemu.png)
+![Run the kernel](images/qemu.png)
 
-Wonderful! Dispite the problems in the source code, xv6 boots and runs inside
+Wonderful! Despite the problems in the source code, xv6 boots and runs inside
 qemu. Now let's try some shell commands.
 
-![commands](commands.png)
+![commands](images/commands.png)
 
 The `ls` and `echo` commands run perfectly! How very exciting!
