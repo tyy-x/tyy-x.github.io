@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Xv6 1 | Note Bank</title>
+    <title>First run of xv6 | Note Bank</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular operating system called xv6.
-Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development on the new RISC-V architecture. And the original x86 version is no longer under development.">
+    <meta name="description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular one called xv6.
+Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development for the new RISC-V architecture. And the original x86 version is no longer under development.">
     <meta name="generator" content="Hugo 0.118.2">
     
     
@@ -30,22 +30,22 @@ Xv6 is a teaching operating system developed by the people in MIT. There are two
 
     
     
-    <meta property="og:title" content="Xv6 1" />
-<meta property="og:description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular operating system called xv6.
-Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development on the new RISC-V architecture. And the original x86 version is no longer under development." />
+    <meta property="og:title" content="First run of xv6" />
+<meta property="og:description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular one called xv6.
+Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development for the new RISC-V architecture. And the original x86 version is no longer under development." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tyy-x.github.io/posts/xv6-1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-09-30T00:03:22+09:00" />
 <meta property="article:modified_time" content="2023-09-30T00:03:22+09:00" />
-<meta itemprop="name" content="Xv6 1">
-<meta itemprop="description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular operating system called xv6.
-Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development on the new RISC-V architecture. And the original x86 version is no longer under development."><meta itemprop="datePublished" content="2023-09-30T00:03:22+09:00" />
+<meta itemprop="name" content="First run of xv6">
+<meta itemprop="description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular one called xv6.
+Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development for the new RISC-V architecture. And the original x86 version is no longer under development."><meta itemprop="datePublished" content="2023-09-30T00:03:22+09:00" />
 <meta itemprop="dateModified" content="2023-09-30T00:03:22+09:00" />
-<meta itemprop="wordCount" content="428">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Xv6 1"/>
-<meta name="twitter:description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular operating system called xv6.
-Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development on the new RISC-V architecture. And the original x86 version is no longer under development."/>
+<meta itemprop="wordCount" content="427">
+<meta itemprop="keywords" content="xv6,Operating System," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="First run of xv6"/>
+<meta name="twitter:description" content="This post marks the starting point of my journey into the world of operating systems by examining a particular one called xv6.
+Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development for the new RISC-V architecture. And the original x86 version is no longer under development."/>
 
 	
   </head>
@@ -71,6 +71,19 @@ Xv6 is a teaching operating system developed by the people in MIT. There are two
       
       
 <div class="ananke-socials">
+  
+    
+    <a href="https://github.com/tyy-x" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
   
 </div>
 
@@ -108,7 +121,7 @@ Xv6 is a teaching operating system developed by the people in MIT. There are two
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Xv6 1</h1>
+      <h1 class="f1 athelas mt3 mb1">First run of xv6</h1>
       
       
       
@@ -119,10 +132,10 @@ Xv6 is a teaching operating system developed by the people in MIT. There are two
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>This post marks the starting point of my journey into the world of operating
-systems by examining a particular operating system called <a href="https://github.com/mit-pdos/xv6-public">xv6</a>.</p>
+systems by examining a particular one called <a href="https://github.com/mit-pdos/xv6-public">xv6</a>.</p>
 <p>Xv6 is a teaching operating system developed by the people in MIT.
 There are two official versions of xv6. It is first developed targeting the x86
-architecture, later their effort moves to the development on the new RISC-V
+architecture, later their effort moves to the development for the new RISC-V
 architecture. And the original x86 version is no longer under development.</p>
 <p>I chose the x86 version simply because I want to know more about the x86
 architecture.</p>
@@ -134,15 +147,16 @@ To run the kernel, I need <a href="https://www.qemu.org/docs/master/about/index.
 QEMU is a machine emulator which can be used for system emulation and user mode
 emulation. System emulation provides a virtual model of an entire machine
 (CPU, memory and emulated devices) to run a guest OS. Obviously, this is what I
-need. To install QEMU on Debian, just run this command: <code>sudo apt install qemu-system-x86</code>.</p>
-<p>Now I describe the steps to build and run the kernel.</p>
+need. To install QEMU on Debian, just run this command:</p>
+<pre tabindex="0"><code>sudo apt install qemu-system-x86
+</code></pre><p>Now I describe the steps to build and run the kernel.</p>
 <h3 id="get-the-source-code">Get the source code</h3>
-<p>I cloned the original repo of xv6 as xv6-x86 to my local machine:
-<img src="clone.png" alt="Clone the repo"></p>
+<p>I cloned the original repo of xv6 as xv6-x86 to my local machine:</p>
+<p><img src="images/clone.png" alt="Clone the repo"></p>
 <h2 id="build">Build</h2>
 <p>Now, it&rsquo;s time to build the kernel. Run <code>make</code> inside the root directory of
 the cloned repository:</p>
-<p><img src="build.png" alt="Build the kernel">
+<p><img src="images/build.png" alt="Build the kernel">
 You can see that there is something wrong in the source file <strong>mp.c</strong> that
 causes gcc to report errors. Of course the permanent solution is to fix those
 problems (which look like bugs based on the error descriptions), but now I
@@ -156,12 +170,20 @@ errors.</p>
 CFLAGS = -fno-pic -static -fno-builtin -fno-strict-aliasing -O2 -Wall -MD -ggdb -m32 -fno-omit-frame-pointer
 </code></pre><h2 id="run-the-kernel">Run the kernel</h2>
 <p>To run the kernel inside qemu, just run the command <code>make qemu</code>:</p>
-<p><img src="qemu.png" alt="Run the kernel"></p>
-<p>Wonderful! Dispite the problems in the source code, xv6 boots and runs inside
+<p><img src="images/qemu.png" alt="Run the kernel"></p>
+<p>Wonderful! Despite the problems in the source code, xv6 boots and runs inside
 qemu. Now let&rsquo;s try some shell commands.</p>
-<p><img src="commands.png" alt="commands"></p>
+<p><img src="images/commands.png" alt="commands"></p>
 <p>The <code>ls</code> and <code>echo</code> commands run perfectly! How very exciting!</p>
 <ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/xv6/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">xv6</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/operating-system/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Operating System</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -187,6 +209,19 @@ qemu. Now let&rsquo;s try some shell commands.</p>
   </a>
     <div>
 <div class="ananke-socials">
+  
+    
+    <a href="https://github.com/tyy-x" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
   
 </div>
 </div>

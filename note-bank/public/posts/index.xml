@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Sep 2023 00:03:22 +0900</lastBuildDate><atom:link href="https://tyy-x.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Xv6 1</title>
+      <title>First run of xv6</title>
       <link>https://tyy-x.github.io/posts/xv6-1/</link>
       <pubDate>Sat, 30 Sep 2023 00:03:22 +0900</pubDate>
       
       <guid>https://tyy-x.github.io/posts/xv6-1/</guid>
-      <description>This post marks the starting point of my journey into the world of operating systems by examining a particular operating system called xv6.
-Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development on the new RISC-V architecture. And the original x86 version is no longer under development.</description>
+      <description>This post marks the starting point of my journey into the world of operating systems by examining a particular one called xv6.
+Xv6 is a teaching operating system developed by the people in MIT. There are two official versions of xv6. It is first developed targeting the x86 architecture, later their effort moves to the development for the new RISC-V architecture. And the original x86 version is no longer under development.</description>
     </item>
     
   </channel>
