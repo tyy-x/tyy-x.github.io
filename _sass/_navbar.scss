@@ -184,6 +184,10 @@
   background-color: inherit;
   color: var(--global-text-color);
 
+  .nav-link {
+    white-space: nowrap;
+  }
+
   &:hover {
     color: var(--global-hover-color);
   }
